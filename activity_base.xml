@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/baseactivity_topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/top_bg_color" >
+
+        <LinearLayout
+            android:id="@+id/baseactivity_backLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/baseactivity_backImg"
+                android:layout_width="30dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/return_button" />
+
+            <TextView
+                android:id="@+id/baseactivity_backText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dip"
+                android:text="返回"
+                android:textColor="@drawable/return_text"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/baseactivity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="dka"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/baseactivity_rightLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/baseactivity_rightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dip"
+                android:text="a"
+                android:textColor="@color/white"
+                android:textSize="18dip"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/baseactivity_rightImg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/baseactivity_rightImg2"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/baseactivity_loadingLayout"
+        layout="@layout/loading"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/baseactivity_badnetworkLayout"
+        layout="@layout/bad_network"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/baseactivity_contextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>
